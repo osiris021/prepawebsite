@@ -24,20 +24,7 @@ public class UserComponent {
         UUID uuid = UUID.randomUUID();
 
         user_profile = checkIfFieldsAreEmpty(user_profile);
-
-        userProfileRepository.createUserProfile(
-                uuid.toString(),
-                user_profile.getName(),
-                user_profile.getFirstname(),
-                user_profile.getEmail(),
-                user_profile.getPassword(),
-                user_profile.getSchool(),
-                user_profile.getYear(),
-                user_profile.getActual_job(),
-                user_profile.getCity(),
-                user_profile.getDescription(),
-                user_profile.getPromotion()
-        );
+        updateUserProfile(uuid.toString(), user_profile);
 
         userRepository.createUser(
                 user_profile.getEmail(),
@@ -102,12 +89,34 @@ public class UserComponent {
 
     public String getUserProfileId() {
 
+        String toReturn = "";
         String email = SecurityContextHolder.getContext().getAuthentication().getName().toString();
-        String toReturn = userProfileRepository.getUserProfileId(email);
+        List<UserProfile> studentList = userProfileRepository.getUserProfileList();
+        for (UserProfile up : studentList) {
+            if (email.equals(up.getEmail())){
+                toReturn = up.getStudent_id();
+            }
+        }
         return toReturn;
     }
 
     public void updateUserProfile(String profileId, UserProfile up) {
+
+        if("".equals(up.getPassword())){
+            userProfileRepository.updateUserProofileWithoutPassword(
+                    profileId,
+                    up.getName(),
+                    up.getFirstname(),
+                    up.getEmail(),
+                    up.getSchool(),
+                    up.getYear(),
+                    up.getActual_job(),
+                    up.getCity(),
+                    up.getCountry(),
+                    up.getPromotion()
+            );
+        }
+
         userProfileRepository.createUserProfile(
                 profileId,
                 up.getName(),

@@ -36,8 +36,8 @@
 
                         <div class="row"><input type="email" th:field="*{email}" th:value="${user_profile.email}" class="col-lg-10 col-lg-offset-1 registerInput emailInput" name="username" id="mail" required="true" autofocus="true"/></div>
                         <div class="row">
-                            <input type="password" th:field="*{password}" th:value="${user_profile.password}" class="col-lg-4 col-lg-offset-1 registerInput firstInput" id="password"  required="true" autofocus="true"/>
-                            <input type="password" th:field="*{check_password}" th:value="${user_profile.check_password}" onChange="checkPasswordMatch();" class="col-lg-4 registerInput" id="passwordcheck"  required="true" autofocus="true"/>
+                            <input type="password" th:field="*{password}" th:value="${user_profile.password}" placeholder="Nouveau Mot de passe" class="col-lg-4 col-lg-offset-1 registerInput firstInput" id="password"  autofocus="true"/>
+                            <input type="password" th:field="*{check_password}" th:value="${user_profile.check_password}" onChange="checkPasswordMatch();" placeholder="Confirmez le nouveau Mot de passe" class="col-lg-4 registerInput" id="passwordcheck" autofocus="true"/>
                         </div>
 
                         <div class="registrationFormAlert row">
