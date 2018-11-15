@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Accueil</title>
+    <div th:replace="fragments/header :: header-css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css"/>
+    <link rel="stylesheet" th:href="@{/css/student_details.css}" href="../../css/student_details.css"/>
+
+    <script type="text/javascript" src="/webjars/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container containerBody">
+    <fieldset>
+        <h1 registerInputclass="h3 mb-3 font-weight-normal">Alumni Profil Etudiant</h1>
+        <div class="row">
+            <img class="profilePicture" th:src="@{/images/profile.png}"/>
+        </div>
+        <div class="row">
+            <p type="text" th:text="${user_profile.name} + ' ' + ${user_profile.firstname}" class="profileName" />
+        </div>
+        <div class="row">
+            <p type="text" th:text="${user_profile.email}" class="profileMail" />
+        </div>
+    </fieldset>
+
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
+                <div class="formContent">
+                    <p class="topDetails"/>
+                    <p class="title">Promotion CPGE</p>
+                    <p class="content" th:text="${user_profile.promotion}"/>
+                    <p class="title">Ecole</p>
+                    <p class="content" th:text="${user_profile.school}"/>
+                    <p class="title">Promotion</p>
+                    <p class="content" th:text="${user_profile.year}"/>
+                    <p class="title">Emploi Actuel</p>
+                    <p class="content" th:text="${user_profile.actual_job}"/>
+                    <p class="title">Lieu</p>
+                    <p class="content" th:text="${user_profile.city} + ', ' + ${user_profile.country}"/>
+                    <p class="title">Description</p>
+                    <p class="content description" th:text="${user_profile.description}"/>
+                    <p class="bottomDetails"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{/js/main.js}"/>
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>

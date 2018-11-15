@@ -1,0 +1,65 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">>
+<head>
+    <div th:fragment="header-css">
+        <!-- this is header-css -->
+        <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" th:href="@{/css/main.css}"
+              href="../../css/main.css" />
+    </div>
+</head>
+<body>
+<div th:fragment="header">
+    <!-- this is header -->
+    <div class="header-wrapper">
+        <div class="top-nav">
+            <div class="container">
+                <div class="row">
+                    <p class="topHeader"></p>
+                </div>
+            </div>
+        </div>
+        <div class="top-nav">
+            <div class="container">
+                <div class="row">
+                    <a class="navbar-brand" href="#"><img class="logo" th:src="@{/images/logo_prep.png}"/></a>
+                    <nav class="navbar navbar-inverse">
+                        <div class="container">
+                            <div id="navbar" class="collapse navbar-collapse">
+                                <div class="row">
+                                    <div class="leftDiv">
+                                        <ul class="nav navbar-nav">
+                                            <li>
+                                                <a th:classappend="${module == 'home' ? 'selectedMenu' : ''}" class="linkNav" th:href="@{/}">Accueil</a>
+                                            </li>
+                                            <li sec:authorize="hasAnyRole('ADMIN','STUDENT')" >
+                                                <a th:classappend="${module == 'directory' ? 'selectedMenu' : ''}" class="linkNav" th:href="@{/directory}">Annuaire</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightDiv">
+                                        <ul class="nav navbar-nav navbarRight">
+                                            <li sec:authorize="hasAnyRole('ADMIN','STUDENT')" >
+                                                <a th:classappend="${module == 'myAccount' ? 'selectedMenu' : ''}" class="linkNav" th:href="@{/my_account}">Compte</a>
+                                            </li>                                            <li sec:authorize="isAnonymous()">
+                                                <a th:classappend="${module == 'login' ? 'selectedMenu' : ''}" th:class="linkNav" href="/login">Login</a>
+                                            </li>
+                                            <li sec:authorize="isAuthenticated()">
+                                                <form class="logoutForm" id="logoutform" th:action="@{/logout}" method="post"/>
+                                                <a th:class="linkNav" onclick="document.getElementById('logoutform').submit()">Logout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

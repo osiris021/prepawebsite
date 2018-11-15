@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Connexion</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <div th:replace="fragments/header :: header-css"/>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" th:href="@{/css/login.css}" href="../../css/login.css"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css"/>
+
+    <script type="text/javascript" src="/webjars/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div th:replace="fragments/header :: header(module='login')">Menu Indisponible</div>
+
+<div class="container containerBody">
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
+                <form th:action="@{/login}" method="post">
+                    <fieldset>
+                        <h1 class="h3 mb-3 font-weight-normal">Identifiants</h1>
+                        <div th:if="${param.error}">
+                            <div class="alert alert-danger">
+                                Login ou mot de passe invalide.
+                            </div>
+                        </div>
+                        <div th:if="${param.logout}">
+                            <div class="alert alert-info">
+                                Vous avez été déconnecté(e).
+                            </div>
+                        </div>
+                        <div class="formContent">
+                            <input type="email" name="username" id="username" class="form-control" placeholder="Adresse mail" required="true" autofocus="true"/>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required="true"/>
+                            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Connexion"/>
+                        </div>
+                    </fieldset>
+                </form>
+                <fieldset>
+                    <div class="formContent registerDiv">
+                        <a  th:href="@{/register}" class="btn btn-lg btn-primary btn-block register" th:text="Inscription"></a>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{/js/main.js}"/>
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>

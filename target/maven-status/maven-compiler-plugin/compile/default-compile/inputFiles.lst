@@ -1,0 +1,14 @@
+/home/pictime/Téléchargements/spring-boot-spring-security-thymeleaf/src/main/java/com/prepaWeb/Controllers/IndexController.java
+/home/pictime/Téléchargements/spring-boot-spring-security-thymeleaf/src/main/java/com/prepaWeb/Services/CustomAuthenticationProvider.java
+/home/pictime/Téléchargements/spring-boot-spring-security-thymeleaf/src/main/java/com/prepaWeb/Controllers/UserController.java
+/home/pictime/Téléchargements/spring-boot-spring-security-thymeleaf/src/main/java/com/prepaWeb/SpringBootWebApplication.java
+/home/pictime/Téléchargements/spring-boot-spring-security-thymeleaf/src/main/java/com/prepaWeb/Configurations/CassandraConfiguration.java
+/home/pictime/Téléchargements/spring-boot-spring-security-thymeleaf/src/main/java/com/prepaWeb/Configurations/SpringSecurityConfig.java
+/home/pictime/Téléchargements/spring-boot-spring-security-thymeleaf/src/main/java/com/prepaWeb/Repositories/UserRepository/UserRepository.java
+/home/pictime/Téléchargements/spring-boot-spring-security-thymeleaf/src/main/java/com/prepaWeb/Controllers/DirectoryController.java
+/home/pictime/Téléchargements/spring-boot-spring-security-thymeleaf/src/main/java/com/prepaWeb/Controllers/LoginController.java
+/home/pictime/Téléchargements/spring-boot-spring-security-thymeleaf/src/main/java/com/prepaWeb/Components/UserComponent/UserComponent.java
+/home/pictime/Téléchargements/spring-boot-spring-security-thymeleaf/src/main/java/com/prepaWeb/Repositories/UserProfileRepository/UserProfileRepository.java
+/home/pictime/Téléchargements/spring-boot-spring-security-thymeleaf/src/main/java/com/prepaWeb/Services/UserService.java
+/home/pictime/Téléchargements/spring-boot-spring-security-thymeleaf/src/main/java/com/prepaWeb/Repositories/UserRepository/User.java
+/home/pictime/Téléchargements/spring-boot-spring-security-thymeleaf/src/main/java/com/prepaWeb/Repositories/UserProfileRepository/UserProfile.java

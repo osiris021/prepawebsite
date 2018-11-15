@@ -1,0 +1,146 @@
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+}
+
+.navbar-inverse .navbar-brand {
+	font-size: 23px;
+	font-weight: bold;
+}
+
+.navbar-inverse{
+    background-color: #ffffff;
+    border-color: #ffffff;
+    margin-left: inherit;
+    box-shadow: 10px 10px 5px #e3e3e3;
+}
+
+.navbar-brand{
+    color: #ffffff;
+}
+
+.navbar-inverse {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.nav>li>a {
+    font-size: 20px;
+}
+
+.linkNav:hover {
+    outline: 0;
+    font-weight: bold;
+}
+
+.btn-validate{
+    color: #28a745;
+    font-weight: bold !important;
+    background-color: transparent;
+    border-width: 2px !important;
+    border-color: #28a745 !important;
+}
+
+.btn-validate:hover{
+    color: #ffffff;
+    font-weight: bold !important;
+    background-color: #28a745;
+    border-width: 2px !important;
+    border-color: #28a745 !important;
+}
+
+.btn-cancel{
+    color: #dc3545;
+    font-weight: bold !important;
+    background-color: transparent;
+    border-width: 2px !important;
+    border-color: #dc3545 !important;
+}
+
+.btn-cancel:hover{
+    color: #ffffff;
+    font-weight: bold !important;
+    background-color: #dc3545;
+    border-width: 2px !important;
+    border-color: #dc3545 !important;
+}
+
+html{
+    height:100%;
+}
+
+body{
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1965a1;
+    color: white;
+    text-align: center;
+    height: 50px;
+    font-size: 19px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #1965a1;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #dc3545;
+}
+
+.topHeader{
+    background-color: #1965a1;
+    height: 40px;
+    margin-bottom: 0px;
+}
+
+.logo{
+    position: absolute;
+    height: 178px;
+    z-index: 10000000;
+    margin-top: -53px;
+    display: block;
+    margin-left: 34%;
+    margin-right: 50%;
+}
+
+.text-center{
+    margin-top: 0.5%;
+}
+
+.rightDiv{
+    width: 50%;
+    display:inline-block;
+    padding-left: 290px;
+}
+
+.leftDiv{
+    width: 50%;
+    display:inline-block;
+    margin-left: -33px;
+    text-align: -webkit-right;
+    padding-right: 302px;
+}
+
+.header-wrapper{
+    position: fixed;
+    width: 100%;
+}
+
+.containerBody {
+    padding-top: 80px;
+}
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Accueil</title>
+    <div th:replace="fragments/header :: header-css"/>
+    <div th:replace="fragments/footer :: footer-css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css"/>
+        <link rel="stylesheet" th:href="@{/css/home.css}" href="../../css/home.css"/>
+
+    <script type="text/javascript" src="/webjars/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div th:replace="fragments/header :: header(module='home')">Menu Indisponible</div>
+
+<div class="container containerBody">
+    <div class="starter-template">
+        <h1 class="title">VA FALLOIR TROUVER UN TRUC A METTRE SUR L'ACCUEIL</h1>
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{/js/main.js}"/>
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>

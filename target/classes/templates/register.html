@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf + Spring Security</title>
+    <div th:replace="fragments/header :: header-css"/>
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" th:href="@{/css/login.css}" href="../../css/login.css"/>
+    <link rel="stylesheet" th:href="@{/css/register.css}" href="../../css/register.css"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css"/>
+
+    <script type="text/javascript" src="/webjars/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div th:replace="fragments/header :: header(module='home')">Menu Indisponible</div>
+
+<div class="container containerBody">
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
+                <form action="/register" th:action="@{/register}" th:object="${user_profile}" method="post">
+                    <fieldset>
+                        <h1 registerInputclass="h3 mb-3 font-weight-normal">Inscription</h1>
+                        <h2 class="h4 mb-3 font-weight-normal">Aidez nous ou les étudiants à vous connaitre</h2>
+                    </fieldset>
+                    <div class="formContent">
+                        <div class="row">
+                            <select th:field="*{promotion}" th:value="${user_profile.promotion}" class="col-lg-2 registerInput promotion" name="username" id="promotion"  placeholder="Promotion" required="true" autofocus="true"/>
+                        </div>
+                        <div class="row">
+                            <input type="text" th:field="*{name}" th:value="${user_profile.name}" name="username" id="name" class="col-lg-4 col-lg-offset-1 registerInput firstInput" placeholder="Nom" required="true" autofocus="true"/>
+                            <input type="text" th:field="*{firstname}" th:value="${user_profile.firstname}" name="password" id="firstname" class="col-lg-4 registerInput" placeholder="Prénom" required="true"/>
+                        </div>
+
+                        <div class="row"><input type="email" th:field="*{email}" th:value="${user_profile.email}" class="col-lg-10 col-lg-offset-1 registerInput emailInput" name="username" id="mail"  placeholder="Email" required="true" autofocus="true"/></div>
+                        <div class="row">
+                            <input type="password" th:field="*{password}" th:value="${user_profile.password}" class="col-lg-4 col-lg-offset-1 registerInput firstInput" id="password"  placeholder="Mot de Passe" required="true" autofocus="true"/>
+                            <input type="password" th:field="*{check_password}" th:value="${user_profile.check_password}" onChange="checkPasswordMatch();" class="col-lg-4 registerInput" id="passwordcheck"  placeholder="Confirmer mot de Passe" required="true" autofocus="true"/>
+                        </div>
+
+                        <div class="registrationFormAlert row">
+                            <p id="divCheckPasswordMatch"/>
+                        </div>
+
+                        <div class="row">
+                            <input type="text" th:field="*{school}" th:value="${user_profile.school}" class="col-lg-7 col-lg-offset-1 registerInput firstInput schoolInput" name="username" id="school"  placeholder="Ecole" autofocus="true"/>
+                            <select th:field="*{year}" th:value="${user_profile.year}" class="col-lg-2 registerInput yearInput" name="username" id="year"  placeholder="Promotion" autofocus="true"/>
+                        </div>
+
+                        <div class="row">
+                            <input type="text" th:field="*{actual_job}" th:value="${user_profile.actual_job}" class="col-lg-7 col-lg-offset-1 registerInput firstInput thirdInput" name="username" id="work"  placeholder="Poste actuel" autofocus="true"/>
+                            <input type="text" th:field="*{city}" th:value="${user_profile.city}" class="col-lg-2 registerInput firstInput thirdInput" name="username" id="city"  placeholder="Ville" autofocus="true"/>
+                            <input type="text" th:field="*{country}" th:value="${user_profile.country}" class="col-lg-2 registerInput thirdInput" name="username" id="country"  placeholder="Pays" autofocus="true"/>
+                        </div>
+
+                        <div class="row">
+                            <textarea th:field="*{description}" th:value="${user_profile.description}" placeholder="Une petite bafouille drôle (ou pas hun on est pas des bêtes) à votre sujet"  class="col-lg-offset-1 registerInput firstInput descriptionInput" rows="10" cols="30"/>
+                        </div>
+                        <fieldset>
+                            <input class="btn btn-validate btn-form" type="submit" value="Valider" />
+                            <input class="btn btn-cancel btn-form col-lg-offset-1" type="reset" value="Annuler" />
+                        </fieldset>
+                    </div>
+                    <script type="text/javascript" th:src="@{/js/register.js}"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{/js/main.js}"/>
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>
