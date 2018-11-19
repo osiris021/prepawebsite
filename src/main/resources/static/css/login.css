@@ -76,9 +76,10 @@ body{
 
 .outer {
     display: table;
-    position: absolute;
+    position: relative;
     height: 75%;
     width: 99%;
+    padding-top: 16%;
 }
 
 .middle {
@@ -87,7 +88,7 @@ body{
 }
 
 .inner {
-    margin-left: auto;
+    margin-left: 32.2%;
     margin-right: auto;
     width: 30%;
     border-radius: 15px;

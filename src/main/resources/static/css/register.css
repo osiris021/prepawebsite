@@ -4,6 +4,7 @@
 
 .inner{
     width: 45%;
+    margin-left: 25.2%;
 }
 
 .registerInput{
@@ -17,11 +18,14 @@
 }
 
 .firstInput{
-    margin-right: 33px;
+    margin-right: 4%;
+    margin-left: 8.5%;
 }
 
 .emailInput{
     width: 83.1%;
+    margin-left: 8.5%;
+    margin-right: 9%;
 }
 
 .schoolInput{
@@ -63,9 +67,15 @@ select{
 
 .outer{
     height: 80%;
+    padding-bottom: 10%;
 }
 
 .promotion{
     width: 22%;
     margin-left: 38%;
+}
+
+.cityInput{
+    width: 25%;
+    margin-right: 4%;
 }

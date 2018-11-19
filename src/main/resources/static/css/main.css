@@ -90,6 +90,7 @@ body{
     text-align: center;
     height: 50px;
     font-size: 19px;
+    z-index: 1000;
 }
 
 .navbar-inverse .navbar-nav>li>a {
@@ -108,9 +109,10 @@ body{
 
 .logo{
     position: absolute;
-    height: 178px;
+    height: 150%;
+    width: 27%;
     z-index: 10000000;
-    margin-top: -53px;
+    margin-top: -34px;
     display: block;
     margin-left: 34%;
     margin-right: 50%;
@@ -137,10 +139,11 @@ body{
 .header-wrapper{
     position: fixed;
     width: 100%;
+    z-index: 1000;
 }
 
-.containerBody {
-    padding-top: 80px;
-}
+/*.containerBody {*/
+    /*padding-top: 6%;*/
+/*}*/
 
 

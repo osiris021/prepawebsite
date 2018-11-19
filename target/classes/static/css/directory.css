@@ -44,3 +44,12 @@ a.page-link {
 th{
     vertical-align: middle !important;
 }
+
+#pager{
+    margin-top: -15px;
+}
+
+.containerBody{
+    padding-top: 4%;
+    padding-bottom: 5%;
+}
