@@ -142,8 +142,7 @@ body{
     z-index: 1000;
 }
 
-/*.containerBody {*/
-    /*padding-top: 6%;*/
-/*}*/
-
+iframe{
+    display: none;
+}
 

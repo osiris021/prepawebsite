@@ -1,9 +1,9 @@
-var start = 1900;
+var start = 1999;
 var end = new Date().getFullYear();
 var options = "";
 var optionsPromotion = "";
 for(var year = start ; year <=end; year++){
-    options += "<option>"+ year +"</option>";
+    options += "<option value='" + year + "'>"+ year +"</option>";
 }
 
 optionsPromotion = "<option selected disabled hidden>Promotion La Ramée<option>";
@@ -29,7 +29,3 @@ function checkPasswordMatch() {
     }
 }
 
-// $(function() {
-//     var temp="Promotion La Ramée";
-//     $("#promotion").val(temp);
-// });

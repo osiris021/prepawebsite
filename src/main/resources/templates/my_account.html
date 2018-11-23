@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Spring Boot Thymeleaf + Spring Security</title>
+    <title>Mon compte</title>
     <div th:replace="fragments/header :: header-css"/>
-    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
 
     <link rel="stylesheet" th:href="@{/css/login.css}" href="../../css/login.css"/>
     <link rel="stylesheet" th:href="@{/css/register.css}" href="../../css/register.css"/>
@@ -27,7 +27,7 @@
                     </fieldset>
                     <div class="formContent">
                         <div class="row">
-                            <select th:field="*{promotion}" th:value="${user_profile.promotion}" class="col-lg-2 registerInput promotion" name="username" id="promotion" required="true" autofocus="true"/>
+                            <select th:field="*{promotion}" th:value="${user_profile.promotion}" class="col-lg-2 registerInput promotion" name="promotion" id="promotion" required="true" autofocus="true"/>
                         </div>
                         <div class="row">
                             <input type="text" th:field="*{name}" th:value="${user_profile.name}" name="username" id="name" class="col-lg-4 col-lg-offset-1 registerInput firstInput" required="true" autofocus="true"/>
@@ -62,6 +62,8 @@
                             <input class="btn btn-validate btn-form" type="submit" value="Valider" />
                             <input class="btn btn-cancel btn-form col-lg-offset-1" type="reset" value="Annuler" />
                         </fieldset>
+                    <script type="text/javascript" th:src="@{/js/my_account.js}"/>
+                    <iframe th:onload="'loaderFunction(\'' + ${user_profile.promotion} + '\', \'' + ${user_profile.year} + '\')'"></iframe>
                     </div>
                     <script type="text/javascript" th:src="@{/js/register.js}"/>
                 </form>

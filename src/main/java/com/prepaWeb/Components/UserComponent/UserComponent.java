@@ -103,7 +103,7 @@ public class UserComponent {
     public void updateUserProfile(String profileId, UserProfile up) {
 
         if("".equals(up.getPassword())){
-            userProfileRepository.updateUserProofileWithoutPassword(
+            userProfileRepository.updateUserProfileWithoutPassword(
                     profileId,
                     up.getName(),
                     up.getFirstname(),
